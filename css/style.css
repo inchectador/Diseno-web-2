@@ -1,0 +1,1534 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* header */
+
+.header-area {
+    height: 80px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.main-menu .open-btn {
+    font-size: 30px;
+    color: #fff;
+    margin-right: 50px;
+}
+
+.offcanvas-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* código que nos permite cuadrar el menú y dejarlo fixed */
+
+
+    background: rgb(0, 0, 0);
+    z-index: 1;
+
+
+    width: 30vw;
+    height: 100vh;
+    /* esto le pone límites horizontales al menú y ocupa todo el height */
+    
+    display: flex;
+    align-items: center;
+
+
+    transform: translateX(100%);
+    transition: all .4s ease;
+    /* el traslateX lo que hace es esconderlo y el transition es el tiempo que tarda*/
+}
+
+.offcanvas-menu.active {
+    transform: translateX(0);
+}
+/* esto lo que hace es hacerlo aparecer desde el lateral derecho */
+
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    /* código que nos posiciona el botón en su sitio */
+
+
+    font-size: 30px;
+    color: #fff;
+}
+
+.offcanvas-menu ul {
+    width: 100%;
+}
+
+.offcanvas-menu ul li {
+    list-style: none;
+}
+
+.offcanvas-menu ul li a {
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    display: block;
+    text-decoration: none;
+    padding: 15px 0 15px 7vw;
+
+    transition: all .4s ease;
+    /* transition para el efecto hover */
+}
+
+.offcanvas-menu ul li a:hover {
+    background: rgb(69, 21, 243);
+}
+
+
+
+/* main */
+
+/* section 1 */
+
+/* carrusel */
+
+.titulo{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 30px;
+    right: 25%;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.carousel{
+    height: 50vh;
+   background-color:azure;
+   position: relative;
+   top: 0;
+   
+}
+
+
+.carrusel {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .carrusel-items {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 30px 0px;
+  }
+  
+  .carrusel-item {
+    min-width: 300px;
+    max-width: 300px;
+    height: 200px;
+    outline: 2px solid black;
+    cursor: pointer;
+  }
+  
+  .carrusel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carrusel-item:hover {
+    transform: scale(1.2);
+  }
+  /* efecto para que se haga más grande la imagen */
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  /* cards */
+
+
+  .cards{
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+  }
+
+  /* esto centra y pone el fondo a las cards */
+
+  .content h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+}
+/* este código determina el tamaño del título y lo junta un poco con la imagen de arriba */
+
+
+
+.content{
+    width: 20%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: 0.4s;
+    background: #f4f4f4;
+}
+
+/* este código determina las dimensiones de la card, el alineamiento del texto, el color de fondo, el cursor... */
+
+.content:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -8px);
+}
+
+/* este código hace que en el 0.4s la card hago un juego de sombras con box-shadow, además, se desplaza en eje Y
+con transform translate */
+
+.content img{
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+/* aquí se determina las dimensiones de la img y su comportamiento */
+
+.content p{
+    text-align: center;
+    color: #b2bec3;
+    padding-top: 0px 8px;
+}
+
+/* Aquí el texto se centra, se le da padding top y color */
+
+.content h6{
+    font-size: 26px;
+    text-align: center;
+    color: #222f3e;
+    margin: 0;
+}
+/* Aquí el texto del precio cobra su forma... */
+
+.content ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+/* se le quitan a las estrellas los puntos de ul y se les mete en un flexbox */
+
+.content li{
+    padding-top: 5px;
+}
+
+.fa{
+    font-size: 26px;
+    transition: 0.4s;
+    margin: 3px;
+}
+
+.checked{
+    color: #ff9f43;
+}
+
+.fa:hover{
+    transform: scale(1.3);
+    transition: 0.6s;
+}
+
+/* una pequeña animación para las estrellas que se agradan cuando se hace hover */
+
+.content button{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+.buy-1{
+    background: #2183a2;
+}
+
+/* el bottón se contruye siguiento el perfil de la card con border-bottom-right/left-radius */
+
+
+
+
+
+
+
+
+
+
+
+/* modal */
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    /* este código centra el modal, lo fija y le da un tono oscuro */
+    display: flex;
+    opacity: 0;
+    /* con opacity hacemos que el modal esté por detrás del div y sea un elemento transparente*/
+    pointer-events: none;
+    /* pointer-events hace que no responda si clickamos encima suya */
+    transition: opacity .6s .9s;
+    /* este es el tiempo que tarda el modal en esconderse cuando se pulsa el boton de cerrar */
+    --transform: translateY(-100vh);
+    /* esto esconde el div del modal y hace que aparezca de arriba hacia abajo */
+    --transition: transform .8s;
+    /* esto detemina el tiempo en el que aparece el dicho div */
+
+}
+
+
+.modal--show{
+    opacity: 1;
+    /* esto hace que el modal aparezca*/
+    pointer-events: unset;
+    transition: opacity .6s;
+    /*  esto determina el tiempo en el que el background aparece */
+    --transform: translateY(0);
+    /* hace que el modal aparezca*/
+    --transition: transform .8s .8s;
+    /* esto determina el tiempo en el que aparece el modal */
+}
+
+/* como antes, esta clase se añade cuando se clicka el boton para abrir el modal */
+
+.modal__container{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    min-height: 100vh;
+    /* código para las dimensiones del div */
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    /* display: grid; */
+    gap: 1em;
+    place-items: center;
+
+    grid-auto-columns: 100%;
+    /* establece las dimensiones de la única columna */
+    transform: var(--transform);
+    transition:var(--transition);
+    /* aquí reciclamos el transform y el transition que hemos usado antes en .modal */
+    position: relative;
+    right: 60px;
+
+
+    
+    background: transparent; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* código de maquetación */
+}
+
+.modal__close{
+    text-decoration: none;
+    color: #fff;
+    background-color: #F26250;
+    padding: 1em 1em;
+    border: 1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+   
+}
+/* código del moton para cerrar el modal */
+
+.modal__close:hover{
+    color: #F26250;
+    background-color: #fff;
+}
+/* efecto hover del boton */
+
+
+
+/* formulario */
+
+
+.modal__container form{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* dimensiones del form dentro del div */
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    /* efectos estéticos */
+    border-radius: 15px;
+}
+/* apunte: flex-wrap:wrap permite que los elementos se apilen */
+
+.modal__container form h2{
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.modal__container form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    /* outline determina el contorno del input cuando a este se le da el foco. */
+    border: none;
+    /* border es como outline pero sin darle el foco */
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+
+}
+
+.modal__container form input::placeholder{
+    color: #ddd;
+}
+/* placeholder determina el textoprovisional que se pone en el input antes de escribir nada */
+
+.modal__container form #lastName,
+.modal__container form #mobile{
+    margin-left: 20px;
+}
+
+.modal__container form h4{
+    color: #fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.modal__container form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar{
+    width: 1rem;
+}
+/* el -webkit-scrollbar afecta a la barra de desplazamiento del textarea */
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: rgba(194, 194, 194, 0.713);
+}
+
+/* esto determina el color del scrollbar */
+
+.container form #button{
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.container form #button:hover{
+    opacity: 0.7s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* sección de ofertas */
+
+
+.ofertas{
+    display: flex;
+    background-color: #333;
+}
+
+.texto{
+    display: flex;
+    text-align: center;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 2rem;
+    padding: 1.2rem;
+
+}
+
+/* carrusel portátiles */
+
+
+.container{
+    max-width: 1200px;
+    width: 95%;
+}
+/* esto es el ancho que va a ocupar el carrusel */
+
+.slider-wrapper{
+    position: relative;
+}
+
+.slider-wrapper .image-list{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    /* espacio entre imgs */
+    font-size: 0;
+    list-style: none;
+    /* le quitamos los puntos */
+    margin-bottom: 30px;
+    overflow-x: auto;
+    /* hace que no pete el lado derecho */
+    scrollbar-width: none;
+    /* no aparecerá el scrollbar */
+    
+}
+/* maquetación de la lista de imágenes del carrusel */
+
+.slider-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+}
+ /* le quitamos la barra de scroll */
+
+.slider-wrapper .image-list .image-item{
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+    /* esto indica cómo la img debe ajustarse a su contenedor */
+}
+/* dimensiones de cada una de las imgs */
+
+.container .slider-scrollbar{
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+/* disposición del scrollbar de las imagenes */
+
+.slider-scrollbar .scrollbar-track{
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+/* maquetación del scrollbar */
+
+.slider-scrollbar:hover .scrollbar-track{
+    height: 4px;
+}
+/* un pequeño hover */
+
+.slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+/* el scrollbar se pinta de negro, se coloca en su sitio y se vuelve a dimensionar con position absolute */
+
+.slider-scrollbar .scrollbar-thumb:active{
+    cursor: grabbing;
+    /* pone el cursor como agarrando el scrollbar */
+    height: 8px;
+    top: -2px;
+}
+/* la clase se activa cuando se clicka en el scrollbar */
+
+.slider-scrollbar .scrollbar-thumb:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+
+
+
+
+
+
+
+
+/* sección card desarrolladores */
+
+
+
+.card-slidder{
+    display: flex;
+    /* hacemos que las cards se pongan unas detras de otras */
+    justify-content: center;
+    align-items: center;
+    /* centramos los elementos */
+    height: 100vh;
+    /* hacemos que ocupe toda la pantalla */
+    background-color: azure;
+    /* le damos color */
+    position: relative;
+    width: 1075px;
+    /* hacemos que ocupe un ancho determinado */
+}
+
+.card{
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    /* redondeamos los picos */
+    height: 530px;
+    width: 296px;
+    /* le damos unos límites */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /* un poquito de sombra */
+}
+
+.card .card-content{
+    display: flex;
+    flex-direction: column;
+    /* hacemos que los elementos se dispongan en columna */
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    /* z-index: 100; */
+ 
+}
+
+
+/* .swiper{
+    width: 950px;
+} */
+
+.swiper-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* hacemos un display grid y 3 columnas */
+    justify-content: center;
+    position: absolute;
+    left: 25rem;
+    bottom: 6rem;
+    /* disponemos el grid sobre el div anterior que está en position relative */
+    gap: 1.5rem;
+    /* espacio entre cada card */
+}
+
+.card-slidder .card .image{
+    height: 140px;
+    width: 140px;
+    /* dimensiones de la img */
+    border-radius: 50%;
+    /* para que sea una img redonda */
+    padding: 3px;
+    background: #fff;
+    box-shadow: 0px -1px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card-slidder .card .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* indicamos que la imagen cobra toda la zona */
+    border-radius: 50%;
+    border: 3px solid #fff;
+    /* indicamos como queremos el borde de la img */
+}
+
+.box1{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    border-radius: 20px 20px 0 0;
+    background: linear-gradient(106.32deg, #f3a60f 14.23%,
+    rgba(255, 25, 25, 0) 139.97%);
+}
+/* esta clase es para la zona coloreada de la card1. Se indica el color, el alto, el border-radius que tiene que tener... */
+
+.box2{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    border-radius: 20px 20px 0 0;
+    background: linear-gradient(106.32deg, #00c2ff 14.23%,
+    rgba(255, 25, 25, 0) 139.97%);
+}
+
+.box3{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    border-radius: 20px 20px 0 0;
+    background: linear-gradient(106.32deg, #f30fdd 14.23%,
+    rgba(255, 25, 25, 0) 139.97%);
+}
+
+/* ... pasa lo mismo con estas dos clases */
+
+.card .media-icons{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* se disponen los iconos en columna y con position absolute se terminan de retocar la posición */
+
+.card .media-icons i{
+    color: #fff;
+    opacity: 0.7;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card .media-icons i:hover{
+    opacity: 1;
+}
+/* se pone una pequeña animación con opacity, cuando se pasa el cursor por encima de los iconos se vuelven más opacos */
+
+.card .name-profession{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+/* se maqueta el nombre y la profesión de las cards */
+
+.name-profession .name{
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    /* se dimensionan las letras y se les da color */
+}
+
+.name-profession .profession{
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    /* igual que en .name */
+}
+
+
+section .card .about{
+    display: flex;
+    text-align: center;
+    color: #444;
+    margin-top: 45px;
+    margin-bottom: 5px;
+} 
+/* se dispone el texto de la card y se le da color */
+.card .button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+/* maquetación de los botones */
+
+.card .b1 button{
+    background: #f3a323;
+}
+.card .b2 button{
+    background: #00c2ff;
+}
+.card .b3 button{
+    background: #f30fdd;
+}
+/* se les añade colores a los botones */
+
+.card-content .button button{
+    outline: none;
+    border: none;
+    /* se les quita los bordes */
+    color: #fff;
+    padding: 8px 22px;
+    border-radius: 5px;
+    /* color, padding y se redondean los picos */
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* equipo */
+
+.desarrolladores{
+   display: flex;
+}
+
+.comentario{
+    height: 40%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: azure;
+}
+
+.equipo{
+    text-align: center;
+    max-width: 400px;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+
+
+
+
+
+
+
+
+/* API */
+
+.API{
+    background-color: #333;
+    width: 100%;
+}
+
+.data{
+    padding: 2rem 3rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.1rem;
+    text-align: center;
+
+
+}
+
+.relleno{
+    text-align: center;
+    max-width: 400px;
+    font-weight: 900;
+    font-size: 1.6rem;
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
+
+
+@media(max-width:1425px){
+   
+    .equipo{
+        display: none;
+    }
+    .API{
+        display:none;
+    }
+    .relleno{
+        display: none;
+    }
+    .desarrolladores{
+        background-color: azure;
+        width: 100%;
+        
+    }
+    .card-slidder{
+       position: relative;
+       left: 10rem;
+    }
+
+}
+
+@media(max-width:1200px){
+    .card-slidder{
+        position: relative;
+        left: 5rem;
+    }
+}
+
+@media(max-width:992px){
+    .card-slidder{
+        position: relative;
+        left: 1px;
+    }
+    .swiper-wrapper{
+    display: block;
+    position: relative;
+    top: 29rem;
+    left: 18rem;
+   }
+   .desarrolladores{
+    height: 108rem;
+   }
+   
+}
+
+
+@media(max-width:768px){
+   .swiper-wrapper{
+    position: relative;
+    left: 12rem;
+   }
+}
+
+@media(max-width:576px){
+   .swiper-wrapper{
+    position: relative;
+    left: 6rem;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* cards horizontales */
+
+
+.servicios{
+    display: flex;
+    background-color: #333;
+}
+
+
+
+.contenedor{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    /* los elementos hijos pueden fluir en varias líneas */
+    justify-content: space-between;
+    /* hasta aquí maquetación normal */
+    width: 900px;
+    height: 380px;
+    /* dimensiones del div */
+    background: #fff;
+    margin: 20px;
+    /* color y margen */
+}
+
+.contenedor .img-contenedor{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* maquetación */
+    width: 50%;
+    height: 100%;
+    /* dimensiones del div de la imagen */
+    background: #212121;
+    /* este es el color del div de la imagen, que no se ve porque está la imagen encima */
+}
+
+
+.contenedor .img-contenedor img{
+    position: relative;
+    width: 450px;
+    height: 380px;
+    /* hacemos que la img se ajuste al div */
+}
+
+.contenedor .details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* maquetación */
+    width: 50%;
+    height: 100%;
+    /* dimensiones de la zona donde va a ir el texto de la card */
+    box-sizing: border-box;
+    padding: 2.5rem;
+}
+
+.contenedor .details h2 span{
+    font-size: 0.4rem;
+    text-transform: uppercase;
+    /* para poner el texto en mayúscula */
+    letter-spacing: 2px;
+    /* espacio entre cada letra */
+    color: #999;
+    /* color de la letra */
+}
+
+.contenedor .details p{
+    max-width: 85%;
+    margin-left: 15%;
+    /* esto le pone un poco de sangría */
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 36px;
+}
+
+.contenedor .details h3{
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+    color: #a2a2a2;
+    float: left;
+    /* el float left permite maquetarlo a la izquierda */
+}
+
+.contenedor .details button{
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    /* outline y border none les quita los límites al boton */
+    padding: 15px 20px;
+    margin-top: 5px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 40px;
+    /* redondea los picos */
+    float: right;
+    /* se desplaza a la derecha con float right */
+}
+
+
+
+/* parte de relleno */
+
+
+.descripcion{
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.descricion__titulo{
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* accordeon menu */
+
+.divAcordeon__div{
+    position: relative;
+    bottom: 150px;
+}
+
+ul{
+    list-style: none;
+    /* le quitamos los puntitos a todas las ul */
+}
+
+
+
+
+.accordion-menu {
+    max-width: 350px;
+    margin: 100px auto 20px;
+    /* aquí se establece margen para arriba, izquierda y derecha (auto) y abajo, respectivamente */
+    background: #242d41;
+    border-radius: 8px;
+    overflow: hidden;
+    /* hidden sirve para que no salga de los límites del ul las letras */
+    box-shadow: 0 0 10px #000;
+}
+
+.accordion-menu li:last-child .dropdown {
+    border-bottom: 0;
+}
+/* :last-child representa el último elemento dentro de una serie de elementos hermanos */
+.accordion-menu li.active .dropdown {
+    color: #fff;
+}
+/* :active habla de un elemento que se está activando por el usuario, en este caso por un click */
+.accordion-menu li.active .dropdown  .fa-chevron-down {
+    transform: rotate(180deg);
+}
+/* esta clase, con :active, nos permite darle la vuelta a la flecha cuando clickamos en el li */
+
+.dropdown {
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 45px;
+    font-size: 18px;
+    border-bottom: 2px solid #2d374d;
+    color: #999999;
+    position: relative;
+    /* este es el tiempo que tarda el dropdown en bajar cuando se pulsa en el li*/
+}
+
+.dropdown:hover{
+    background: #566f82;
+}
+/* cambio de color cuando le ponemos encima el ratón */
+  
+.dropdown  i {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+}
+/* colocamos la flechita en su sitio */
+
+.dropdown .fa-chevron-down {
+    right: 12px;
+    left: auto;
+    /* transition: transform 0.2s ease-in-out; */
+}
+
+.submenuItems {
+    display: none;
+    background: #2d374d;;
+}
+/* esta clase es la que mantiene oculta el contenido del menú */
+.accordion-menu li.active .submenuItems{
+    display: block;
+}
+/* clase que permite hacer aparecer el contenido del menu */
+
+.submenuItems a {
+    display: block;
+    color: #66b2ff;
+    font-weight: 600;
+    padding: 12px 12px 12px 45px;
+    text-decoration: none;
+    /* les quita la linea que subraya del anchor */
+}
+
+.submenuItems a:hover {
+    background-color: #5c7185;
+    color: #fff;
+  }
+  /* pequeño efecto sobre el contenido del menu */
+
+
+
+@media(max-width:992px){
+    .servicios{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .serviciosDiv{
+        position: relative;
+        bottom: 6rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* sección artículo especial*/
+
+
+
+
+
+
+  .textoScroll{
+    width: 100%;
+    /* para que ocupe todo el ancho de la pantalla */
+    overflow: hidden;
+    /* para que las letras no hagan un scroll lateral */
+    display: flex;
+    white-space: nowrap;
+    background-color: azure;
+    /* esto es para que no haya saltos de línea */
+
+}
+
+.textoScroll__scroll{
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* diseño se las letras que vamos a usar; las volvermos mayúsculas y las hacemos más grandes*/
+    color: #333;
+    animation: animaTexto 60s linear infinite;
+    /* animación en 30s, entre div y div, de manera lineal */
+}
+
+.textoScroll__texto{
+    margin: 0 2.5rem;
+}
+/* margen que separa el texto de los span */
+
+@keyframes animaTexto {
+    from{
+        transform: translate(0, 0);
+    }
+     to{
+        transform: translate(-100%, 0);
+     }
+}
+
+/* keyframes nos permite establecer los puntos intermedios en una secuencia de animación. from es el principio de la secuencia
+y to es el final */
+
+
+/* cards con efecto */
+
+
+
+.cards__efecto{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: azure;
+}
+
+.myCard {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    /* dimensiones del div */
+    perspective: 1000px;
+    /* con esta propiedad se le transmite a los elementos hijos perspectiva, es decir, se configura una representación
+    en 3D y se la dimensiona detro del eje z */
+    margin: 2.5rem 0;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* se dimensiona el título, se centra, y se le da margen 0 */
+  
+  .innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    /* se establece el tiempo del giro */
+    transform-style: preserve-3d;
+    /* transform-style establece si el elemento hijo está posicionado en el espacio 3D (preserve-3d) */
+    cursor: pointer;
+  }
+  
+  .myCard:hover .innerCard {
+    transform: rotateY(180deg);
+  }
+  /* animación en la que se hace un giro de la carta */
+  
+  .frontSide,
+  .backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* se establecen los elementos en columna */
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* esta propiedad determina si la cara de un elemento es visible o no */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    /* aquí se establece la sombra de la card */
+    font-weight: 700;
+  }
+  
+  .frontSide,
+  .frontSide::before {
+    background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
+  }
+  /* aquí establecemos un gradiente de colores para la cara de frente */
+  
+  .backSide,
+  .backSide::before {
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  }
+  
+    /* aquí establecemos un gradiente de colores para la cara de atrás */
+
+
+  /* el pseudo-elemento ::before añade un algo después del elemento seleccionado */
+
+  .backSide {
+    transform: rotateY(180deg);
+  }
+
+  /* est es para que cuando salgo la cara de atrás pueda volver a la cara de delante*/
+  
+  .frontSide::before,
+  .backSide::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* esto permite direccionar la sombra del div */
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 1em;
+    filter: blur(20px);
+    /* filtro de difuminado */
+    animation: animate 5s linear infinite;
+    /* hace una animación en la que parece que el box shadow hace un bombeo por atrás de la card  */
+  }
+  
+  @keyframes animate {
+    0% {
+      opacity: 0.3;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.3;
+    }
+  }
+
+  /* la opacity hace que este bombeo sea posible */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* footer */
+
+  footer{
+    list-style: none;
+    text-transform: capitalize;
+  }
+
+  .contener{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    left: 130px;
+  }
+
+  
+.footer{
+    background-color: #24262B;
+    padding: 80px 0;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links{
+    width: 20%;
+    padding: 0 15px;
+}
+
+.footer-links h4{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00C3FF;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.footer-links ul{
+    list-style-type: none;
+    position: relative;
+    right: 35px;
+    
+}
+
+.footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover{
+    color: #fff;
+    padding: 6px;
+}
+
+.social-links a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover{
+    background-color: #00C3FF;
+}
+
+@media(max-width:992px){
+    .footer-row{
+        text-align: center;
+    }
+
+    .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+        position: relative;
+        right: 10%;
+    }
+}
+
+@media(max-width:768px){
+   .footer-links{
+    position: relative;
+    right: 17%;
+   }
+}
+
+@media(max-width:576px){
+    .footer-links{
+        position: relative;
+        right: 21%;
+    }
+}
+
+
+
+
+/* 
+<!-- -576px pantallas pequeñas -->
+<!-- 576px - 768px móviles apaisados -->
+<!-- 768px - 992px tablets -->
+<!-- 992px - 1200px desktop -->
+<!-- + 1200px - pantallas grandes--> */
